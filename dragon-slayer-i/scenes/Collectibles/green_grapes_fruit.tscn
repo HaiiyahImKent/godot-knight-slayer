@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://if26tb2i3dvv"]
+
+[ext_resource type="Texture2D" uid="uid://b6ffr11p8n2k" path="res://assets/sprites/fruit.png" id="1_sghfk"]
+[ext_resource type="Script" uid="uid://7ef4l83ybsbe" path="res://code/Collectibles/GreenGrapesFruit.cs" id="1_snn2m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snn2m"]
+radius = 4.1231055
+
+[node name="Green Grapes Fruit" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_snn2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sghfk")
+region_enabled = true
+region_rect = Rect2(32.80384, 0, 12.980873, 16.468779)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_snn2m")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
