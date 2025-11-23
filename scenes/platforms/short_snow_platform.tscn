@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkbw0hd82f5ch"]
+
+[ext_resource type="Texture2D" uid="uid://un1kmh0dbmi4" path="res://assets/sprites/platforms.png" id="1_f6sxj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwwm4"]
+size = Vector2(16, 9)
+
+[node name="Short Snow Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f6sxj")
+region_enabled = true
+region_rect = Rect2(0, 48.170887, 16.06699, 9.1623535)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_bwwm4")
+one_way_collision = true
